@@ -3,13 +3,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.beer.works.beer.bom</groupId>
+		<groupId>com.github.luisEnriqueSM</groupId>
 		<artifactId>brewery-bom</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>0.0.2</version>
 	</parent>
 	<groupId>org.beer.works.beer.inventory</groupId>
 	<artifactId>beerInventoryService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>beerInventoryService</name>
 	<description>Beer Inventory Service</description>
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 </project>
