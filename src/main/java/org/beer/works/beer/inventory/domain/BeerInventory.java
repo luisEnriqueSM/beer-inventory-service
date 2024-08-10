@@ -1,12 +1,15 @@
 package org.beer.works.beer.inventory.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.JdbcTypeCode;
 
 import java.sql.Timestamp;
+import java.sql.Types;
 import java.util.UUID;
 
 @Getter
@@ -15,6 +18,8 @@ import java.util.UUID;
 @Entity
 public class BeerInventory extends BaseEntity{
 
+    @JdbcTypeCode(Types.VARCHAR)
+    @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
     private UUID beerId;
     private String upc;
     private Integer quantityOnHand = 0;
